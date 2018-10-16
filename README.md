@@ -19,7 +19,7 @@ require 'build/debug.phar';
 |Function Name|Parametters|Return|Description|
 |-----|-----|-----|-----|
 |d|$data, $is_print_out, $is_html_encode|string: html code|analyse `$data` variable (object, array, string, number, boolean,...) and output its values. Similar to dd function of Laravel|
-|dl|$data = NULL, $is_html_encode = true|string: html code|Same as `d`, but break the line.|
+|dn|$data = NULL, $is_html_encode = true|string: html code|Same as `d`, but break the line.|
 |dd|$data = NULL, $is_html_encode = true|string: html code|Same as `dl`, but die/exit after printing.|
 |dt|$message = NULL|string: html code|Same as `dl`, but output timestampe (by format [YYYY/MM/DD HH:MM:SS]) before message. For time checking|
 
@@ -53,7 +53,7 @@ define("DEBUG_LOG_PATH", "/tmp/");
 ### Functions of debug.php
 
 ```php
-dl("ARRAY");
+dn("ARRAY");
 $author = array(
     'name'                  =>'Nguyen Nam',
     'status'                =>'Single',
@@ -67,10 +67,10 @@ $author = array(
     'has_job'               => FALSE,
 );
 
-dl($author);
+dn($author);
 hr('#ff0000');
 
-dl("OBJECT");
+dn("OBJECT");
 $author = new stdClass();
 $author->name           = 'Nguyen Nam';
 $author->status         = 'Single';
@@ -82,15 +82,14 @@ $author->father                 = array();
 $author->mother                 = NULL;
 $author->has_job                = FALSE;
 
-dl($author);
+dn($author);
 hr('#ff0000');
 
-dl("DEBUG AND DIE!!!");
+dn("DEBUG AND DIE!!!");
 dd("YOU CANNOT SEE NEXT OUTPUT AFTER THIS FUNCTION");
-dl("DIED OR NOT???");
+dn("DIED OR NOT???");
 
 hr('#00AA00');
-
 ```
 
 Debug Functions versions 1.0 is now on github.
