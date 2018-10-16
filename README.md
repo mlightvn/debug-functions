@@ -16,12 +16,32 @@ You can see code in `lib` folder.
 
 ## Explanation
 
+### Functions of debug.php
+
 |Function Name|Parametters|Return|Description|
 |-----|-----|-----|-----|
-|d|$data, $is_print_out, $is_html_encode|string: html code||
-|dl|$data = NULL, $is_html_encode = true|string: html code||
-|dd|$data = NULL, $is_html_encode = true|string: html code||
-|dt|$message = NULL|string: html code||
+|d|$data, $is_print_out, $is_html_encode|string: html code|analyse `$data` variable (object, array, string, number, boolean,...) and output its values. Similar to dd function of Laravel|
+|dl|$data = NULL, $is_html_encode = true|string: html code|Same as `d`, but break the line.|
+|dd|$data = NULL, $is_html_encode = true|string: html code|Same as `dl`, but die/exit after printing.|
+|dt|$message = NULL|string: html code|Same as `dl`, but output timestampe (by format [YYYY/MM/DD HH:MM:SS]) before message. For time checking|
+
+Parametters meaning:
+
+|Parametter|Type|Default|Meaning|
+|-----|-----|-----|-----|
+|$data|(All)|NULL|Variable for debug/print-out on screen.|
+|$is_print_out|boolean|true|Print out on screen.|
+|$is_html_encode|boolean|true|Encode HTML code. Otherwise HTML code will available. E.g: `dl('<a href="https://coxanh.net">https://coxanh.net</a>', false);`, this code will show a link like this [https://coxanh.net](https://coxanh.net)|
+
+### Functions of functions.php
++ writeLog($mailto, $logPath = "/tmp/")
++ hr($color = "#000000")
++ br
++ json($data)
++ startWith(string $haystack, string $needle)
++ endWith(string $haystack, string $needle)
++ color(string $text = '', string $color='#000000')
++ delete(string $path) : delete files on a folder by format.
 
 ## Sample:
 
