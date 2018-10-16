@@ -20,8 +20,8 @@ require 'build/debug.phar';
 |-----|-----|-----|-----|
 |d|$data, $is_print_out, $is_html_encode|string: html code|analyse `$data` variable (object, array, string, number, boolean,...) and output its values. Similar to dd function of Laravel|
 |dn|$data = NULL, $is_html_encode = true|string: html code|Same as `d`, but break the line.|
-|dd|$data = NULL, $is_html_encode = true|string: html code|Same as `dl`, but die/exit after printing.|
-|dt|$message = NULL|string: html code|Same as `dl`, but output timestampe (by format [YYYY/MM/DD HH:MM:SS]) before message. For time checking|
+|dd|$data = NULL, $is_html_encode = true|string: html code|Same as `dn`, but die/exit after printing.|
+|dt|$message = NULL|string: html code|Same as `dn`, but output timestampe (by format [YYYY/MM/DD HH:MM:SS]) before message. For time checking|
 
 Parametters meaning:
 
