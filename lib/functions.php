@@ -25,10 +25,13 @@ function getDevice($ua){
 	}
 }
 
-//メールアドレスログ
-function writeLog($mailto){
-	$fp = fopen(LOG_DIR . "/maillog.log", "a");
-	fwrite($fp,$mailto."\r\n");
+//ログ
+function writeLog($message){
+	if(!define("DEBUG_LOG_PATH")){
+		define("DEBUG_LOG_PATH", "/tmp/");
+	}
+	$fp = fopen(DEBUG_LOG_PATH . "app.log", "a");
+	fwrite($fp, $message . PHP_EOL);
 	fclose($fp);
 }
 
