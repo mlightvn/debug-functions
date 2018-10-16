@@ -25,7 +25,7 @@ You can see code in `lib` folder.
 
 ## Sample:
 
-### debug.php
+### Functions of debug.php
 
 ```php
 dl("ARRAY");
