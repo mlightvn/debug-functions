@@ -8,7 +8,7 @@
 ## Require
 You must include below file.
 
-```
+```php
 require 'build/debug.phar';
 ```
 
