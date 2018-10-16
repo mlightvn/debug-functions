@@ -5,13 +5,16 @@
 
 > Debug Functions provide some functions for easily debugging. And some useful functions: hr, br, color, startWith, endWith, ...
 
-You can see code in `lib` folder.
-+ debug.php
-+ functions.php
+## Require
+You must include below file.
+
+```
+require 'build/debug.phar';
+```
 
 ## Explanation
 
-### Functions of debug.php
+### Debug Functions
 
 |Function Name|Parametters|Return|Description|
 |-----|-----|-----|-----|
@@ -28,7 +31,7 @@ Parametters meaning:
 |$is_print_out|boolean|true|Print out on screen.|
 |$is_html_encode|boolean|true|Encode HTML code. Otherwise HTML code will available. E.g: `dl('<a href="https://coxanh.net">https://coxanh.net</a>', false);`, this code will show a link like this [https://coxanh.net](https://coxanh.net)|
 
-### Functions of functions.php
+### Other Functions
 #### writeLog($message)
 Default log folder is `/tmp/`, you can change it by this code. Add this code before include `functions.php`
 
