@@ -34,7 +34,14 @@ Parametters meaning:
 |$is_html_encode|boolean|true|Encode HTML code. Otherwise HTML code will available. E.g: `dl('<a href="https://coxanh.net">https://coxanh.net</a>', false);`, this code will show a link like this [https://coxanh.net](https://coxanh.net)|
 
 ### Functions of functions.php
-+ writeLog($mailto, $logPath = "/tmp/")
+#### writeLog($message)
+Default log folder is `/tmp/`, you can change it by this code. Add this code before include `functions.php`
+
+```php
+define("DEBUG_LOG_PATH", "/tmp/");
+```
+
+#### Other functions
 + hr($color = "#000000")
 + br
 + json($data)
