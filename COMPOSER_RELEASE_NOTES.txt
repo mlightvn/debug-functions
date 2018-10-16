@@ -1,0 +1,17 @@
+
+
+Starting with Smarty 3.1.21 Composer has been configured to load the packages from github.
+
+*******************************************************************************
+*                                                                             *
+*  NOTE: Because of this change you must clear your local composer cache with *
+*                 the "composer clearcache" command                           *
+*                                                                             *
+*******************************************************************************
+
+To get the latest stable version use
+    "require": {
+        "namtenten/debug-functions": "~1.0"
+    }
+in your composer.json file.
+

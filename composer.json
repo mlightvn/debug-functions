@@ -1,0 +1,24 @@
+{
+    "name": "namtenten/debug-functions",
+    "type": "library",
+    "description": "DEBUG FUNCTIONS: build some debug and common functions for PHP",
+    "keywords": [
+        "DEBUG FUNCTIONS"
+    ],
+    "homepage": "https://github.com/namtenten/debug-functions",
+    "license": "GNU GENERAL PUBLIC LICENSE",
+    "authors": [
+        {
+            "name": "Nguyen Nam"
+        }
+    ],
+    "require": {
+        "php": ">=4.1"
+    },
+    "autoload": {
+        "files": [
+            "debug.php",
+            "functions.php"
+        ]
+    }
+}
