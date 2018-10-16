@@ -8,7 +8,11 @@ For documentation see
 
 ## Distribution repository
 
-> Debug Functions provide some functions for easily debugging.
+> Debug Functions provide some functions for easily debugging. And some useful functions: hr, br, color, startWith, endWith, ...
+
+You can see code in `lib` folder.
++ debug.php
++ functions.php
 
 ## Explanation
 
@@ -21,8 +25,9 @@ For documentation see
 
 ## Sample:
 
-```php
+### debug.php
 
+```php
 dl("ARRAY");
 $author = array(
     'name'                  =>'Nguyen Nam',
