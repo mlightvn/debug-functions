@@ -49,9 +49,6 @@ define("DEBUG_LOG_PATH", "/tmp/");
 + delete(string $path) : delete files on a folder by format.
 
 ## Sample:
-
-### Functions of debug.php
-
 ```php
 dn("ARRAY");
 $author = array(
