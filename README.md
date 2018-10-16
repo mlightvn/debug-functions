@@ -1,11 +1,6 @@
 # Debug Functions
 [![Donate](https://www.wiauk.org/wp-content/uploads/2017/07/Donate-Box_goodwill.png)](https://www.paypal.me/ngocnam)
 
-## Documentation
-
-For documentation see 
-[coxanh.net](https://coxanh.net) 
-
 ## Distribution repository
 
 > Debug Functions provide some functions for easily debugging. And some useful functions: hr, br, color, startWith, endWith, ...
