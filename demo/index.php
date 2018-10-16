@@ -4,8 +4,8 @@
  *
  * @package Example-application
  */
-require '../debug.php';
-require '../functions.php';
+require '../lib/debug.php';
+require '../lib/functions.php';
 
 dl("ARRAY");
 $author = array(
