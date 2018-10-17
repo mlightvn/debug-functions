@@ -70,10 +70,10 @@ hr('#ff0000');
 
 dn("OBJECT");
 $author = new stdClass();
-$author->name           = 'Nguyen Nam';
-$author->status         = 'Single';
-$author->year_old       = 300;
-$author->children       = new stdClass();
+$author->name                   = 'Nguyen Nam';
+$author->status                 = 'Single';
+$author->year_old               = 300;
+$author->children               = new stdClass();
 $author->children->amount       = 10;
 $author->children->place        = 'outer space';
 $author->father                 = array();

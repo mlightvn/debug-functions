@@ -6,7 +6,7 @@
  */
 require '../build/debug.phar';
 
-dl("ARRAY");
+dn("ARRAY");
 $author = array(
     'name'                  =>'Nguyen Nam',
     'status'                =>'Single',
@@ -20,27 +20,27 @@ $author = array(
     'has_job'               => FALSE,
 );
 
-dl($author);
+dn($author);
 hr('#ff0000');
 
-dl("OBJECT");
+dn("OBJECT");
 $author = new stdClass();
-$author->name           = 'Nguyen Nam';
-$author->status         = 'Single';
-$author->year_old       = 300;
-$author->children       = new stdClass()
+$author->name                   = 'Nguyen Nam';
+$author->status                 = 'Single';
+$author->year_old               = 300;
+$author->children               = new stdClass();
 $author->children->amount       = 10;
 $author->children->place        = 'outer space';
 $author->father                 = array();
 $author->mother                 = NULL;
 $author->has_job                = FALSE;
 
-dl($author);
+dn($author);
 hr('#ff0000');
 
-dl("DEBUG AND DIE!!!");
+dn("DEBUG AND DIE!!!");
 dd("YOU CANNOT SEE NEXT OUTPUT AFTER THIS FUNCTION");
-dl("DIED OR NOT???");
+dn("DIED OR NOT???");
 
 hr('#00AA00');
 
