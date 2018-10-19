@@ -18,8 +18,8 @@ require 'build/debug.phar';
 
 |Function Name|Parametters|Return|Description|
 |-----|-----|-----|-----|
-|d|$data, $is_print_out, $is_html_encode|string: html code|analyse `$data` variable (object, array, string, number, boolean,...) and output its values. Similar to dd function of Laravel|
-|dn|$data = NULL, $is_html_encode = true|string: html code|Same as `d`, but break the line.|
+|d|$data, $is_print_out, $is_html_encode|string: html code|analyse `$data` variable (object, array, string, number, boolean,...) and output its values. Similar to `dd` function of Laravel. Only string will be in black color. Array or Object will be in table format.|
+|dn|$data = NULL, $is_html_encode = true|string: html code|Same as `d`, but there is break (`<br>`) at the end.|
 |dd|$data = NULL, $is_html_encode = true|string: html code|Same as `dn`, but die/exit after printing.|
 |dt|$message = NULL|string: html code|Same as `dn`, but output timestampe (by format [YYYY/MM/DD HH:MM:SS]) before message. For time checking|
 
@@ -29,7 +29,7 @@ Parametters meaning:
 |-----|-----|-----|-----|
 |$data|(All)|NULL|Variable for debug/print-out on screen.|
 |$is_print_out|boolean|true|Print out on screen.|
-|$is_html_encode|boolean|true|Encode HTML code. Otherwise HTML code will available. E.g: `dl('<a href="https://coxanh.net">https://coxanh.net</a>', false);`, this code will show a link like this [https://coxanh.net](https://coxanh.net)|
+|$is_html_encode|boolean|true|Works only with string. Encode HTML code. Otherwise HTML code will available. E.g: `dl('<a href="https://coxanh.net">https://coxanh.net</a>', false);`, this code will show a link like this [https://coxanh.net](https://coxanh.net)|
 
 ### Other Functions
 #### writeLog($message)
