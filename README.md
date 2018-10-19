@@ -53,11 +53,11 @@ define("DEBUG_LOG_PATH", "/tmp/");
 ```php
 dn("ARRAY");
 $author = array(
-    'name'                  =>'Nguyen Nam',
-    'status'                =>'Single',
-    'year_old'              =>300,
-    'children'              =>array(
-        'amount'            => 10,
+    'name'                  => 'Nguyen Nam',
+    'status'                => 'Single',
+    'year_old'              => 300, // number, output is red color
+    'children'              => array(
+        'amount'            => '10', // string, output is black color
         'place'             => 'outer space',
     ),
     'father'                => array(),
@@ -72,9 +72,9 @@ dn("OBJECT");
 $author = new stdClass();
 $author->name                   = 'Nguyen Nam';
 $author->status                 = 'Single';
-$author->year_old               = 300;
+$author->year_old               = 300; // number, output is red color
 $author->children               = new stdClass();
-$author->children->amount       = 10;
+$author->children->amount       = '10'; // string, output is black color
 $author->children->place        = 'outer space';
 $author->father                 = array();
 $author->mother                 = NULL;
