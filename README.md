@@ -33,7 +33,7 @@ Parametters meaning:
 
 ### Other Functions
 #### writeLog($message)
-Default log folder is `/tmp/`, you can change it by this code. Add this code before include `functions.php`
+Default log folder is `/tmp/`, you can change it by this code. Add this below code before include `debug.phar`
 
 ```php
 define("DEBUG_LOG_PATH", "/tmp/");
