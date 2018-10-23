@@ -18,10 +18,15 @@ $author = array(
     'father'                => array(),
     'mother'                => NULL,
     'has_job'               => FALSE,
+    'birthday'              => '1684/09/18 13:45:34',
 );
 
 dn($author);
 hr('#ff0000');
+dn("toJpNengoDateTime");
+dn(toJpNengoDateTime($author['birthday']));
+hr('#ff0000');
+
 
 dn("OBJECT");
 $author = new stdClass();
@@ -34,8 +39,12 @@ $author->children->place        = 'outer space';
 $author->father                 = array();
 $author->mother                 = NULL;
 $author->has_job                = FALSE;
+$author->birthday               = '1684/09/18 13:45:34';
 
 dn($author);
+hr('#ff0000');
+dn("toJpNengoDateTime");
+dn(toJpNengoDateTime($author->birthday));
 hr('#ff0000');
 
 dn("DEBUG AND DIE!!!");
@@ -43,4 +52,3 @@ dd("YOU CANNOT SEE NEXT OUTPUT AFTER THIS FUNCTION");
 dn("DIED OR NOT???");
 
 hr('#00AA00');
-

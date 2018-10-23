@@ -18,8 +18,8 @@ require 'build/debug.phar';
 
 |Function Name|Parametters|Return|Description|
 |-----|-----|-----|-----|
-|d|$data, $is_print_out, $is_html_encode|string: html code|analyse `$data` variable (object, array, string, number, boolean,...) and output its values. Similar to `dd` function of Laravel. Only string will be in black color. Array or Object will be in table format.|
-|dn|$data = NULL, $is_html_encode = true|string: html code|Same as `d`, but there is break (`<br>`) at the end.|
+|d|$data, $is_print_out, $is_html_encode|string: html code|analyse `$data` variable (object, array, string, number, boolean,...) and output its values. Similar to dd function of Laravel|
+|dn|$data = NULL, $is_html_encode = true|string: html code|Same as `d`, but break the line.|
 |dd|$data = NULL, $is_html_encode = true|string: html code|Same as `dn`, but die/exit after printing.|
 |dt|$message = NULL|string: html code|Same as `dn`, but output timestampe (by format [YYYY/MM/DD HH:MM:SS]) before message. For time checking|
 
@@ -29,11 +29,11 @@ Parametters meaning:
 |-----|-----|-----|-----|
 |$data|(All)|NULL|Variable for debug/print-out on screen.|
 |$is_print_out|boolean|true|Print out on screen.|
-|$is_html_encode|boolean|true|Works only with string. Encode HTML code. Otherwise HTML code will available. E.g: `dl('<a href="https://coxanh.net">https://coxanh.net</a>', false);`, this code will show a link like this [https://coxanh.net](https://coxanh.net)|
+|$is_html_encode|boolean|true|Encode HTML code. Otherwise HTML code will available. E.g: `dl('<a href="https://coxanh.net">https://coxanh.net</a>', false);`, this code will show a link like this [https://coxanh.net](https://coxanh.net)|
 
 ### Other Functions
 #### writeLog($message)
-Default log folder is `/tmp/`, you can change it by this code. Add this below code before include `debug.phar`
+Default log folder is `/tmp/`, you can change it by this code. Add this code before include `functions.php`
 
 ```php
 define("DEBUG_LOG_PATH", "/tmp/");
@@ -47,40 +47,50 @@ define("DEBUG_LOG_PATH", "/tmp/");
 + endWith(string $haystack, string $needle)
 + color(string $text = '', string $color='#000000')
 + delete(string $path) : delete files on a folder by format.
++ toJpNengoDateTime(string $date) : Convert date to King (年号) Japanese Date Time.
 
 ## Sample:
 
 ```php
 dn("ARRAY");
 $author = array(
-    'name'                  => 'Nguyen Nam',
-    'status'                => 'Single',
-    'year_old'              => 300, // number, output is red color
-    'children'              => array(
-        'amount'            => '10', // string, output is black color
+    'name'                  =>'Nguyen Nam',
+    'status'                =>'Single',
+    'year_old'              =>300,
+    'children'              =>array(
+        'amount'            => 10,
         'place'             => 'outer space',
     ),
     'father'                => array(),
     'mother'                => NULL,
     'has_job'               => FALSE,
+    'birthday'              => '1684/09/18 13:45:34',
 );
 
 dn($author);
 hr('#ff0000');
+dn("toJpNengoDateTime");
+dn(toJpNengoDateTime($author['birthday']));
+hr('#ff0000');
+
 
 dn("OBJECT");
 $author = new stdClass();
 $author->name                   = 'Nguyen Nam';
 $author->status                 = 'Single';
-$author->year_old               = 300; // number, output is red color
+$author->year_old               = 300;
 $author->children               = new stdClass();
-$author->children->amount       = '10'; // string, output is black color
+$author->children->amount       = 10;
 $author->children->place        = 'outer space';
 $author->father                 = array();
 $author->mother                 = NULL;
 $author->has_job                = FALSE;
+$author->birthday               = '1684/09/18 13:45:34';
 
 dn($author);
+hr('#ff0000');
+dn("toJpNengoDateTime");
+dn(toJpNengoDateTime($author->birthday));
 hr('#ff0000');
 
 dn("DEBUG AND DIE!!!");
