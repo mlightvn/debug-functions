@@ -47,7 +47,7 @@ define("DEBUG_LOG_PATH", "/tmp/");
 + endWith(string $haystack, string $needle)
 + color(string $text = '', string $color='#000000')
 + delete(string $path) : delete files on a folder by format.
-+ toJpNengoDateTime(string $date) : Convert date to King (年号) Japanese Date Time.
++ toJpNengoDateTime(string $date, $hasTime = false) : Convert date to King (年号) Japanese Date Time.
 
 ## Sample:
 
