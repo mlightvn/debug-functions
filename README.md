@@ -20,8 +20,10 @@ require 'build/debug.phar';
 |-----|-----|-----|-----|
 |d|$data, $is_print_out, $is_html_encode|string: html code|analyse `$data` variable (object, array, string, number, boolean,...) and output its values. Similar to dd function of Laravel|
 |dn|$data = NULL, $is_html_encode = true|string: html code|Same as `d`, but break the line.|
-|dd|$data = NULL, $is_html_encode = true|string: html code|Same as `dn`, but die/exit after printing.|
-|dt|$message = NULL|string: html code|Same as `dn`, but output timestampe (by format [YYYY/MM/DD HH:MM:SS]) before message. For time checking|
+|dd|$data = NULL, $is_html_encode = true|string: html code|Same as `dn`, but do die/exit after printing.|
+|dt|$message = NULL|string: html code|Same as `dn`, but output timestamp (by format [YYYY/MM/DD HH:MM:SS]) before message. For time checking|
+|djson|$json = NULL, $isExited = false|*(None)*|Same as `dn`, but will be used to debug elements in a **json string**.|
+|ddjson|$json = NULL|*(None)*|Same as `djson`, but it will do die/exit after printing.|
 
 Parametters meaning:
 
@@ -59,20 +61,27 @@ $author = array(
     'year_old'              =>300,
     'children'              =>array(
         'amount'            => 10,
+        'size'              => '100',
         'place'             => 'outer space',
     ),
     'father'                => array(),
     'mother'                => NULL,
+    'brother'               => "NULL",
     'has_job'               => FALSE,
-    'birthday'              => '1684/09/18 13:45:34',
 );
 
 dn($author);
 hr('#ff0000');
-dn("toJpNengoDateTime");
-dn(toJpNengoDateTime($author['birthday']));
-hr('#ff0000');
 
+dn("Json string");
+$author_json = json_encode($author);
+
+dn($author_json);
+dn("↓　\njson object");
+
+djson($author_json);
+
+hr('#ff0000');
 
 dn("OBJECT");
 $author = new stdClass();
@@ -81,16 +90,25 @@ $author->status                 = 'Single';
 $author->year_old               = 300;
 $author->children               = new stdClass();
 $author->children->amount       = 10;
+$author->children->size         = '100';
 $author->children->place        = 'outer space';
 $author->father                 = array();
 $author->mother                 = NULL;
+$author->brother                = "NULL";
 $author->has_job                = FALSE;
 $author->birthday               = '1684/09/18 13:45:34';
 
 dn($author);
 hr('#ff0000');
-dn("toJpNengoDateTime");
-dn(toJpNengoDateTime($author->birthday));
+
+dn("Json string");
+$author_json = json_encode($author);
+
+dn($author_json);
+dn("↓　\njson object");
+
+djson($author_json);
+
 hr('#ff0000');
 
 dn("DEBUG AND DIE!!!");
