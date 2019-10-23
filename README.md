@@ -54,6 +54,7 @@ define("DEBUG_LOG_PATH", "/tmp/");
 ## Sample:
 
 ```php
+<?php
 dn("ARRAY");
 $author = array(
     'name'                  =>'Nguyen Nam',
