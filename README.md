@@ -22,7 +22,7 @@ description: Support debuging in PHP
 
 You must include below file.
 
-```text
+```php
 require 'build/debug.phar';
 ```
 
@@ -53,7 +53,7 @@ require 'build/debug.phar';
 
 Default log folder is `/tmp/`, you can change it by this code. Add this code before include `functions.php`
 
-```text
+```php
 define("DEBUG_LOG_PATH", "/tmp/");
 ```
 
@@ -70,7 +70,7 @@ define("DEBUG_LOG_PATH", "/tmp/");
 
 ## Sample
 
-```text
+```php
 <?php
 dn("ARRAY");
 $author = array(
