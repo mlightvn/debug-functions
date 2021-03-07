@@ -27,7 +27,7 @@ E.g: 和暦を西暦に変換
 
 ### Composer
 
-```text
+```bash
 composer require namtenten/japan-nengo
 ```
 
@@ -55,15 +55,13 @@ composer require namtenten/japan-nengo
 
 Test file:
 
-```text
+```bash
 # ./test/index.php
 ```
 
 Example code \(when using composer\):
 
-```text
-
-
+```php
 require 'vendor/autoload.php';
 use NamTenTen\JapanNengo;
 
