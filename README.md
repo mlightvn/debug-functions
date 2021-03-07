@@ -1,14 +1,28 @@
-# Debug Functions
-[![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.me/rakujin)
+---
+description: Support debuging in PHP
+---
+
+# PHP Debugger
+
+## Donation
+
+[![Donate](https://camo.githubusercontent.com/2bfa6102e99ff9a137185897b0a566aa0977a4790348c462e6951829e787af8f/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f446f6e6174652d50617950616c2d677265656e2e737667)](https://www.paypal.me/rakujin)
+
+## GitHub Url
+
+[https://github.com/namtenten/debug-functions](https://github.com/namtenten/debug-functions)
 
 ## Distribution repository
+
+
 
 > Debug Functions provide some functions for easily debugging. And some useful functions: hr, br, color, startWith, endWith, ...
 
 ## Require
+
 You must include below file.
 
-```php
+```text
 require 'build/debug.phar';
 ```
 
@@ -16,44 +30,47 @@ require 'build/debug.phar';
 
 ### Debug Functions
 
-|Function Name|Parametters|Return|Description|
-|-----|-----|-----|-----|
-|d|$data, $is_print_out, $is_html_encode|string: html code|analyse `$data` variable (object, array, string, number, boolean,...) and output its values. Similar to dd function of Laravel|
-|dn|$data = NULL, $is_html_encode = true|string: html code|Same as `d`, but break the line.|
-|dd|$data = NULL, $is_html_encode = true|string: html code|Same as `dn`, but do die/exit after printing.|
-|dt|$message = NULL|string: html code|Same as `dn`, but output timestamp (by format [YYYY/MM/DD HH:MM:SS]) before message. For time checking|
-|djson|$json = NULL, $isExited = false|*(None)*|Same as `dn`, but will be used to debug elements in a **json string**.|
-|ddjson|$json = NULL|*(None)*|Same as `djson`, but it will do die/exit after printing.|
+| Function Name | Parametters | Return | Description |
+| :--- | :--- | :--- | :--- |
+| d | $data, $is\_print\_out, $is\_html\_encode | string: html code | analyse `$data` variable \(object, array, string, number, boolean,...\) and output its values. Similar to dd function of Laravel |
+| dn | $data = NULL, $is\_html\_encode = true | string: html code | Same as `d`, but break the line. |
+| dd | $data = NULL, $is\_html\_encode = true | string: html code | Same as `dn`, but do die/exit after printing. |
+| dt | $message = NULL | string: html code | Same as `dn`, but output timestamp \(by format \[YYYY/MM/DD HH:MM:SS\]\) before message. For time checking |
+| djson | $json = NULL, $isExited = false | _\(None\)_ | Same as `dn`, but will be used to debug elements in a **json string**. |
+| ddjson | $json = NULL | _\(None\)_ | Same as `djson`, but it will do die/exit after printing. |
 
-Parametters meaning:
+#### **Parametters meaning:**
 
-|Parametter|Type|Default|Meaning|
-|-----|-----|-----|-----|
-|$data|(All)|NULL|Variable for debug/print-out on screen.|
-|$is_print_out|boolean|true|Print out on screen.|
-|$is_html_encode|boolean|true|Encode HTML code. Otherwise HTML code will available. E.g: `dl('<a href="https://coxanh.net">https://coxanh.net</a>', false);`, this code will show a link like this [https://coxanh.net](https://coxanh.net)|
+| Parametter | Type | Default | Meaning |
+| :--- | :--- | :--- | :--- |
+| $data | \(All\) | NULL | Variable for debug/print-out on screen. |
+| $is\_print\_out | boolean | true | Print out on screen. |
+| $is\_html\_encode | boolean | true | Encode HTML code. Otherwise HTML code will available. E.g: `dl('<a href="https://coxanh.net">https://coxanh.net</a>', false);`, this code will show a link like this [https://coxanh.net](https://coxanh.net/) |
 
 ### Other Functions
-#### writeLog($message)
+
+#### **writeLog\($message\)**
+
 Default log folder is `/tmp/`, you can change it by this code. Add this code before include `functions.php`
 
-```php
+```text
 define("DEBUG_LOG_PATH", "/tmp/");
 ```
 
-#### Other functions
-+ hr($color = "#000000")
-+ br
-+ json($data)
-+ startWith(string $haystack, string $needle)
-+ endWith(string $haystack, string $needle)
-+ color(string $text = '', string $color='#000000')
-+ delete(string $path) : delete files on a folder by format.
-+ toJpNengoDateTime(string $date, $hasTime = false) : Convert date to King (年号) Japanese Date Time.
+#### **Other functions**
 
-## Sample:
+* hr\($color = "\#000000"\)
+* br
+* json\($data\)
+* startWith\(string $haystack, string $needle\)
+* endWith\(string $haystack, string $needle\)
+* color\(string $text = '', string $color='\#000000'\)
+* delete\(string $path\) : delete files on a folder by format.
+* toJpNengoDateTime\(string $date, $hasTime = false\) : Convert date to King \(年号\) Japanese Date Time.
 
-```php
+## Sample
+
+```text
 <?php
 dn("ARRAY");
 $author = array(
@@ -120,3 +137,4 @@ hr('#00AA00');
 ```
 
 Debug Functions versions 1.0 is now on github.
+
