@@ -10,7 +10,7 @@ description: Support debuging in PHP
 
 ## GitHub Url
 
-[https://github.com/namtenten/debug-functions](https://github.com/namtenten/debug-functions)
+[https://github.com/mlightvn/debug-functions](https://github.com/mlightvn/debug-functions)
 
 ## Distribution repository
 
